@@ -1,6 +1,6 @@
 # 删除IPv6公网带宽 {#task_ilc_rg5_zfb .task}
 
-当某个IPv6地址不需要公网通信能力时，您可以配置的公网带宽。
+当某个IPv6地址不需要公网通信能力时，您可以删除IPv6地址的公网带宽。
 
 1.  登录[专有网络管理控制台](https://vpcnext.console.aliyun.com)。 
 2.  在左侧导航栏，单击**IPv6网关**。 
