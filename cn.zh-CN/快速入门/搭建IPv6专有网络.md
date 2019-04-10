@@ -25,7 +25,7 @@
     |**名称**|专有网络的名称。长度为2-128个字符，以英文字母或中文开头，可包含数字，下划线（\_）和短横线（-）。
 
 |
-    |**IPv4网段**|建议您使用RFC私网地址作为专有网络的网段。    -   您可以使用192.168.0.0/16、172.16.0.0/12和10.0.0.0/8这三个标准网段或其子集。如果要使用标准网段的子网作为VPC的网段，需要使用CreateVpcAPI创建VPC。
+    |**IPv4网段**|建议您使用RFC私网地址作为专有网络的网段。    -   您可以使用192.168.0.0/16、172.16.0.0/12和10.0.0.0/8这三个标准网段或其子集。如果要使用标准网段的子网作为VPC的网段，需要使用CreateVpcAPI创建VPC。详细说明，请参见[CreateVpc](../../cn.zh-CN/API参考/专有网络（VPC）/CreateVpc.md#)。
 
     -   如果有多个VPC，或者VPC和本地数据中心互连构建混合云的需求，建议使用上面这些标准网段的子网作为VPC的网段，掩码不超过/16。
 
@@ -78,7 +78,7 @@
 
 |
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/80011/155384690334424_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/80011/155487512434424_zh-CN.png)
 
 
 ## 步骤二：创建并配置ECS实例 {#section_d2s_s1r_dgb .section}
@@ -90,7 +90,7 @@
 1.  在专有网络控制台的左侧导航栏，单击**交换机**。
 2.  在交换机列表页面，找到目标交换机，然后单击**购买** \> **ECS实例**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/80011/155384690334427_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/80011/155487512434427_zh-CN.png)
 
 3.  根据您的需要选择ECS实例的配置。
 
@@ -98,12 +98,12 @@
 
     -   为了方便登录到ECS实例，进行网卡配置。选择**分配公网IP地址**，带宽选择1Mpbs。您也可以选择不分配公网IP，使用弹性公网IP。
     -   选择**免费分配 IPv6 地址**。
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/80011/155384690334429_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/80011/155487512534429_zh-CN.png)
 
 4.  购买完成后，返回ECS实例列表页面。单击实例ID，查看分配的IPv6地址。
 5.  配置静态IPv6地址。
 
-    各操作系统配置静态IPv6地址的详细操作，请参见[为 Windows 实例配置 IPv6 地址](../../cn.zh-CN/网络/配置IPv6地址/Windows实例配置IPv6地址/步骤4：配置IPv6地址.md#)和[为 Linux 实例配置 IPv6 地址](../../cn.zh-CN/网络/配置IPv6地址/Linux实例配置IPv6地址/步骤4：配置IPv6地址.md#)。
+    详细说明，请参见[为Windows实例配置 IPv6 地址](../../cn.zh-CN/网络/配置IPv6地址/Windows实例配置IPv6地址/步骤4：配置IPv6地址.md#)和[为Linux实例配置 IPv6 地址](../../cn.zh-CN/网络/配置IPv6地址/Linux实例配置IPv6地址/步骤4：配置IPv6地址.md#)。
 
 
 ## （可选）步骤三：开通IPv6公网访问 {#section_qqb_wkr_dgb .section}
@@ -115,34 +115,16 @@
 1.  在专有网络控制台的左侧导航栏，单击**IPv6网关**。
 2.  找到目标IPv6网关，然后单击**管理**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/80011/155384690334439_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/80011/155487512534439_zh-CN.png)
 
 3.  在左侧导航栏，单击**IPv6公网带宽**。
 4.  找到ECS实例使用的IPv6地址，然后单击**开通公网带宽**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/80011/155384690334438_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/80011/155487512534438_zh-CN.png)
 
 5.  选择一种计费方式和公网带宽，然后完成支付。
 
 ## 步骤四：配置安全组规则 {#section_ugx_1jr_dgb .section}
-
-在创建IPv6地址的ECS实例后，系统会默认添加一条允许IPv6客户端访问该ECS实例的安全组规则。您可以根据实际需要，修改或新增安全组规则。
-
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/80011/155384690334435_zh-CN.png)
-
-本操作中ECS实例要通过公网访问IPv6服务，所以需要添加一条出方向的安全组规则。操作如下：
-
-1.  在ECS实例列表页面，单击已创建的ECS实例ID。
-2.  在ECS实例详情页面，单击**本实例安全组**，然后单击**配置规则**。
-3.  单击**添加安全组规则**，然后进行配置。
-
-    本操作中的安全组配置如下：
-
-    -   **规则方向**：出方向
-    -   **授权策略**：允许
-    -   **协议类型**：全部
-    -   **授权类型**：IPv6地址段访问
-    -   **授权对象**：::/0
 
 关于添加安全组规则的详细说明，请参见[添加安全组规则](../../cn.zh-CN/安全/安全组/添加安全组规则.md#)。
 
@@ -150,5 +132,5 @@
 
 登录到ECS实例，Ping一个IPv6服务测试通信是否正常。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/80011/155384690334440_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/80011/155487512534440_zh-CN.png)
 
