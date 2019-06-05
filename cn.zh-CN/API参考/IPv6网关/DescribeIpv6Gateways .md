@@ -13,10 +13,10 @@
 |Action|String|是|DescribeIpv6Gateways|要执行的操作，取值：**DeleteIpv6Gateway**。
 
  |
-|RegionId|String|是|cn-huhehaote|IPv6网关的所属地域。
+|RegionId|String|是|cn-huhehaote|IPv6网关所属的地域ID。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。
 
  |
-|Ipv6GatewayId|String|否|ipv6gw-123456|IPv6网关的ID。
+|Ipv6GatewayId|String|否|ipv6gw-123456xxxxxxxx|IPv6网关的ID。
 
  |
 |Name|String|否|ipv6GW|IPv6网关的名称。
@@ -25,10 +25,10 @@
 |PageNumber|Integer|否|1|当前页码。
 
  |
-|PageSize|Integer|否|10|每页包含多少条目。
+|PageSize|Integer|否|10|每页包含的条目数。
 
  |
-|VpcId|String|否|vpc-123456|IPv6网关关联的VPC ID。
+|VpcId|String|否|vpc-123456xxxxxxxx|IPv6网关关联的VPC ID。
 
  |
 
@@ -41,8 +41,8 @@
  |
 |└BusinessStatus|String|Normal|IPv6网关的状态，取值：
 
- -   Normal：正常。
--   FinancialLocked：欠费锁定。
+ -   **Normal**：正常。
+-   **FinancialLocked**：欠费锁定。
 
  |
 |└CreationTime|String|2018-12-20T14:51:23Z|IPv6网关的创建时间。
@@ -57,7 +57,7 @@
 |└InstanceChargeType|String|PostPaid|IPv6网关的计费方式。
 
  |
-|└Ipv6GatewayId|String|ipv6gw-hp3rwmtmfhgistofzypyf|IPv6网关的ID。
+|└Ipv6GatewayId|String|ipv6gw-hp3rwmtmfhgisxxxxxxxx|IPv6网关的ID。
 
  |
 |└Name|String|name|IPv6网关的名称。
@@ -72,13 +72,13 @@
 |└Status|String|Available|IPv6网关的运行状态。
 
  |
-|└VpcId|String|vpc-123456|IPv6网关关联的VPC ID。
+|└VpcId|String|vpc-123456xxxxxxxx|IPv6网关关联的VPC ID。
 
  |
 |PageNumber|Integer|1|当前页码。
 
  |
-|PageSize|Integer|19|每页包含多少条目。
+|PageSize|Integer|19|每页包含的条目数。
 
  |
 |RequestId|String|E3A06196-3E7C-490D-8F39-CB4B5A0CE8AD|请求ID。
@@ -118,8 +118,8 @@ https://vpc.aliyuncs.com/?Action=DescribeIpv6Gateways
       <RegionId>cn-huhehaote</RegionId>
       <InstanceChargeType>PostPaid</InstanceChargeType>
       <ExpiredTime/>
-      <VpcId>vpc-hp3ag7ydchedxpt0smw00</VpcId>
-      <Ipv6GatewayId>ipv6gw-hp33of4uz4k4k7ccwhk95</Ipv6GatewayId>
+      <VpcId>vpc-hp3ag7ydchedxxxxxxxxx</VpcId>
+      <Ipv6GatewayId>ipv6gw-hp33of4uz4k4kxxxxxxxx</Ipv6GatewayId>
     </Ipv6Gateway>
     <Ipv6Gateway>
       <CreationTime>2018-12-05T09:21:35Z</CreationTime>
@@ -131,8 +131,8 @@ https://vpc.aliyuncs.com/?Action=DescribeIpv6Gateways
       <RegionId>cn-huhehaote</RegionId>
       <InstanceChargeType>PostPaid</InstanceChargeType>
       <ExpiredTime/>
-      <VpcId>vpc-hp3kzilwd9yflssfdlgqe</VpcId>
-      <Ipv6GatewayId>ipv6gw-hp33p10bdbt77xbeq6sgj</Ipv6GatewayId>
+      <VpcId>vpc-hp3kzilwd9yflxxxxxxxx</VpcId>
+      <Ipv6GatewayId>ipv6gw-hp33p10bdbt77xxxxxxxx</Ipv6GatewayId>
     </Ipv6Gateway>
   </Ipv6Gateways>
   <TotalCount>2</TotalCount>
@@ -158,8 +158,8 @@ https://vpc.aliyuncs.com/?Action=DescribeIpv6Gateways
 				"RegionId":"cn-huhehaote",
 				"InstanceChargeType":"PostPaid",
 				"ExpiredTime":"",
-				"VpcId":"vpc-hp3ag7ydchedxpt0smw00",
-				"Ipv6GatewayId":"ipv6gw-hp33of4uz4k4k7ccwhk95"
+				"VpcId":"vpc-hp3ag7ydchedxxxxxxxxx",
+				"Ipv6GatewayId":"ipv6gw-hp33of4uz4k4kxxxxxxxx"
 			},
 			{
 				"Name":"IPv6网关",
@@ -171,8 +171,8 @@ https://vpc.aliyuncs.com/?Action=DescribeIpv6Gateways
 				"RegionId":"cn-huhehaote",
 				"InstanceChargeType":"PostPaid",
 				"ExpiredTime":"",
-				"VpcId":"vpc-hp3kzilwd9yflssfdlgqe",
-				"Ipv6GatewayId":"ipv6gw-hp33p10bdbt77xbeq6sgj"
+				"VpcId":"vpc-hp3kzilwd9yflxxxxxxxx",
+				"Ipv6GatewayId":"ipv6gw-hp33p10bdbt77xxxxxxxx"
 			}
 		]
 	},
