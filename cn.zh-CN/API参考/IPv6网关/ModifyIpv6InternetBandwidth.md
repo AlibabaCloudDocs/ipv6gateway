@@ -1,10 +1,10 @@
-# ModifyIpv6InternetBandwidth {#doc_api_951764 .reference}
+# ModifyIpv6InternetBandwidth {#doc_api_Vpc_ModifyIpv6InternetBandwidth .reference}
 
 调用ModifyIpv6InternetBandwidth接口修改IPv6地址的公网带宽。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Vpc&api=ModifyIpv6InternetBandwidth)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Vpc&api=ModifyIpv6InternetBandwidth&type=RPC&version=2016-04-28)
 
 ## 请求参数 {#parameters .section}
 
@@ -15,29 +15,26 @@
  |
 |Bandwidth|Long|是|4|IPv6地址的公网带宽，单位：Mbps，取值范围：**1-5000**。
 
- -   当**InternetChargeType**为**PayByBandwidth**，IPv6地址的公网带宽为1-5000
--   当**InternetChargeType**为**PayByTraffic**，IPv6地址的公网带宽范围同时受到IPv6网关规格的制约：
-    -   Small（默认免费版），公网带宽范围为1-500
-    -   Medium（企业版），公网带宽范围为1-1000
-    -   Large（企业增强版），公网带宽范围为1-2000
+ -   当**InternetChargeType**为**PayByBandwidth**，IPv6地址的公网带宽为1-5000。
+-   当**InternetChargeType**为**PayByTraffic**，IPv6地址的公网带宽范围同时受到IPv6网关规格的制约。
+    -   **Small**（默认免费版），公网带宽范围为1-500。
+    -   **Medium**（企业版），公网带宽范围为1-1000。
+    -   **Large**（企业增强版），公网带宽范围为1-2000。
 
  |
-|RegionId|String|是|cn-huhehaote|IPv6网关的地域ID。
+|RegionId|String|是|cn-huhehaote|IPv6网关的地域ID。您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。
 
  |
 |ClientToken|String|否|123456|请求的幂等性。
 
- 由客户端生成该参数值，要保证在不同请求间唯一，最大不值过64个 ASCII 字符。
+ 由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符。
 
  |
-|Ipv6AddressId|String|否|ipv5-1233456|IPv6地址的实例ID。
-
- |
-|Ipv6InternetBandwidthId|String|否|123456|公网带宽ID。
+|Ipv6AddressId|String|否|ipv5-1233456xxxxxxxx|IPv6地址的实例ID。
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -53,7 +50,7 @@
 
 https://vpc.cn-huhehaote.aliyuncs.com/?Action=ModifyIpv6InternetBandwidth
 &Bandwidth=3
-&Ipv6AddressId=ipv6-hp351bytt9inrfp6tgubd
+&Ipv6AddressId=ipv6-hp351bytt9inrxxxxxxxx
 &RegionId=cn-huhehaote
 &公共参数
 
@@ -65,9 +62,8 @@ https://vpc.cn-huhehaote.aliyuncs.com/?Action=ModifyIpv6InternetBandwidth
 
 ``` {#xml_return_success_demo}
 <ModifyIpv6InternetBandwidthResponse>
-  <RequestId>D560AF68-4CE8-4A5C-B3FE-469F558094D0</RequestId>
+	  <RequestId>D560AF68-4CE8-4A5C-B3FE-469F558094D0</RequestId>
 </ModifyIpv6InternetBandwidthResponse>
-
 ```
 
 `JSON` 格式
@@ -84,5 +80,5 @@ https://vpc.cn-huhehaote.aliyuncs.com/?Action=ModifyIpv6InternetBandwidth
 |--------|---|----|--|
 |404|InvalidRegionId.NotFound|The specified RegionId does not exist in our records.|指定的 RegionId 不存在，请您检查此产品在该地域是否可用。|
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Vpc)
+访问[错误中心](https://error-center.aliyun.com/status/product/Vpc)查看更多错误码。
 
