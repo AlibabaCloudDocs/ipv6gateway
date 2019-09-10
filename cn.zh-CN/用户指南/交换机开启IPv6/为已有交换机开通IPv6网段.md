@@ -6,11 +6,11 @@
 2.  在左侧导航栏，单击**交换机**。
 3.  选择交换机的地域。 
 
-    **说明：** 目前仅华北5（呼和浩特）地域支持开通IPv6网关。
+    **说明：** 目前，仅华北5（呼和浩特）、华南1（深圳）、华北2（北京）地域支持开通IPv6网关。
 
 4.  在交换机页面，找到目标交换机，单击**IPv6网段**列下的**开通IPv6**。 
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/73829/155929121133773_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/73829/156807979633773_zh-CN.png)
 
 5.  如果交换机所属VPC未开通IPv6网段，在弹出的对话框中，单击**确定**。
 6.  指定IPv6的网段，然后单击**确定**。 
