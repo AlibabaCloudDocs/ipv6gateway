@@ -1,37 +1,39 @@
 # Common parameters
 
+Common parameters include common request parameters and common response parameters.
+
 ## Common request parameters
 
-The following table describes common request parameters used in most Alibaba Cloud APIs.
+Common request parameters must be included in all Virtual Private Cloud \(VPC\) API requests.
 
-|Parameter|Type|Required?|Description|
-|:--------|:---|:--------|:----------|
-|Format|String|No|The format of the response. Valid values: JSON \(default\) \| XML |
-|Version|String|Yes|The version of the API. It uses the date format `YYYY-MM-DD`. Valid value: 2016-04-28 |
-|AccessKeyId|String|Yes|The AccessKey ID of the user who calls the API.|
-|Signature|String|Yes|The request signature.|
-|SignatureMethod|String|Yes|The algorithm used to create the request signature. Valid value: HMAC-SHA1 |
-|Timestamp|String|Yes|The time at which the request is signed. It uses the format: `YYYY-MM-DDThh:mm:ssZ`. For example, 2013-01-10T12:00:00Z. |
-|SignatureVersion|String|Yes|The signature version to use. Valid value: 1.0 |
-|SignatureNonce|String|Yes|A random number for the signature to prevent from network attacks. Different random numbers must be used for different requests. |
+|Parameter|Type|Required|Description|
+|:--------|:---|:-------|:----------|
+|Format|String|No|The format in which to return the response. Valid values: JSON and XML. Default value: JSON. |
+|Version|String|Yes|The version number of the API. Format: `YYYY-MM-DD`. Set the value to 2016-04-28. |
+|AccessKeyId|String|Yes|The AccessKey ID provided by Alibaba Cloud.|
+|Signature|String|Yes|The signature string of the current request.|
+|SignatureMethod|String|Yes|The encryption method of the signature string. Set the value to HMAC-SHA1. |
+|Timestamp|String|Yes|The timestamp of the request. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC. For example, 2013-01-10T12:00:00Z specifies 20:00:00 on January 10, 2013 \(UTC+8\). |
+|SignatureVersion|String|Yes|The version of the signature encryption algorithm. Set the value to 1.0. |
+|SignatureNonce|String|Yes|A unique, random number that is used to prevent replay attacks. You must use different random numbers for different requests. |
 
 ## Common response parameters
 
-Alibaba Cloud API responses all use a unified format. A status code of the format 2xx indicates a successful call, and a status code of the 4xx or 5xx format indicates a failed call. For successful calls, returned data can be in a XML or JSON format. You can specify the format of the returned data when sending a request. The default format is XML.
+API responses use the HTTP response format. A 2XX status code indicates a successful call and a 4XX or 5XX status code indicates a failed call. Responses can be returned in JSON or XML format. The default response format is JSON. You can specify the format when you call an operation.
 
-A RequestId is returned no matter if it is successful or not.
+Each response returns a unique RequestId regardless of whether the call is successful.
 
 -   XML format
 
     ```
     <? xml version="1.0" encoding="utf-8"? > 
-        <!—The root node of the result-->
-        <Action+Response>
-            <!—The returned result-->
+        <!-Result Root Node-->
+        <Interface Name+Response>
+            <!-Return Request Tag-->
             <RequestId>4C467B38-3910-447D-87BC-AC049166F216</RequestId>
-            <!—The returned result-->
-        </Action+Response>
-    					
+            <!-Return Result Data-->
+        </Interface Name+Response>
+                        
     ```
 
 -   JSON format
@@ -39,7 +41,7 @@ A RequestId is returned no matter if it is successful or not.
     ```
     {
         "RequestId":"4C467B38-3910-447D-87BC-AC049166F216",
-        /*The returned result*/
+        /*Return Result Data*/
         }
     ```
 
