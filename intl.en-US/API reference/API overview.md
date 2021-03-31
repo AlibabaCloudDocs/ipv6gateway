@@ -6,10 +6,10 @@ The following table lists the available IPv6 Gateway API actions. The endpoint o
 |---|-----------|
 |[CreateIpv6Gateway]()|Creates an IPv6 Gateway.|
 |[ModifyIpv6GatewaySpec]()|Modifies the specification of an IPv6 Gateway.|
-|[t89585.md\#]()|Queries the list IPv6 Gateways.|
+|[DescribeIpv6Gateways]()|Queries the list IPv6 Gateways.|
 |[DescribeIpv6Addresses]()|Queries the list of IPv6 addresses.|
 |[DescribeIpv6GatewayAttribute]()|Queries the detailed information of an IPv6 Gateway.|
-|[t90144.md\#]()|Creates an egress-only rule.|
+|[CreateIpv6EgressOnlyRule]()|Creates an egress-only rule.|
 |[DescribeIpv6EgressOnlyRules]()|Queries the list of egress-only rules.|
 |[DeleteIpv6EgressOnlyRule]()|Deletes an egress-only rule.|
 |[AllocateIpv6InternetBandwidth]()|Creates an IPv6 Internet bandwidth.|
