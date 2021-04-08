@@ -6,7 +6,7 @@ This topic describes how to configure both IPv4 and IPv6 CIDR blocks for a VPC w
 
 2.  On the top of the page, select a region to deploy your VPC.
 
-    **Note:** The following regions support IPv6 gateways: China \(Hangzhou\), China \(Shanghai\), China \(Shenzhen\), China \(Beijing\), China \(Hohhot\), China \(Chengdu\), China \(Hong Kong\), and Singapore \(Singapore\)..
+    **Note:** The following regions support IPv6 gateways: China \(Hangzhou\), China \(Shanghai\), China \(Shenzhen\), China \(Beijing\), China \(Zhangjiakou\), China \(Hohhot\), China \(Chengdu\), China \(Hong Kong\), and Singapore \(Singapore\)..
 
 3.  On the VPCs page, click **Create VPC**.
 
@@ -20,7 +20,7 @@ This topic describes how to configure both IPv4 and IPv6 CIDR blocks for a VPC w
     |**IPv4 CIDR Block**|Specify an IPv4 CIDR block for the VPC. The following setting methods are supported:     -   **Recommended CIDR Block**: Use 192.168.0.0/16, 172.16.0.0/12, or 10.0.0.0/8 as the IPv4 CIDR block of the VPC.
     -   **Custom CIDR Block**: Use 192.168.0.0/16, 172.16.0.0/12, 10.0.0.0/8, or one of their subnets as the IPv4 CIDR block of the VPC. The subnet mask must be 8 to 24 bits in length. For example, enter 192.168.0.0/16. If you need to use a public CIDR block as the IPv4 CIDR block of the VPC, [submit a ticket](https://workorder-intl.console.aliyun.com/console.htm#/ticket/add?productId=1218).
 **Note:** After you create a VPC, you cannot modify its IPv4 CIDR block. |
-    |**IPv6 CIDR Block**|Specify whether to assign an IPv6 CIDR block to the VPC. By default, no IPv6 CIDR block is assigned. If you set this parameter to Allocate, the system automatically creates an IPv6 gateway of the Free Edition for your VPC network, and assigns an IPv6 CIDR block with subnet mask /56, such as 2xx1: db8::/56. By default, IPv6 addresses can only be used for communication within private networks. If you need to enable an IPv6 address to access and be accessed over the Internet, you must purchase IPv6 Internet bandwidth for the IPv6 address. For more information, see [Enable Internet connectivity for an IPv6 address]().
+    |**IPv6 CIDR Block**|Specify whether to assign an IPv6 CIDR block to the VPC. By default, no IPv6 CIDR block is assigned. If you set this parameter to Allocate, the system automatically creates an IPv6 gateway of the Free Edition for your VPC network, and assigns an IPv6 CIDR block with subnet mask /56, such as 2xx1: db8::/56. By default, IPv6 addresses can only be used for communication within private networks. If you need to enable an IPv6 address to access and be accessed over the Internet, you must purchase IPv6 Internet bandwidth for the IPv6 address. For more information, see [Enable Internet connectivity for an IPv6 address](/intl.en-US/User Guide/Manage IPv6 Internet bandwidth/Enable Internet connectivity for an IPv6 address.md).
 
 **Note:** After you create a VPC, you cannot modify its IPv6 CIDR block. |
     |**Description**|Enter a description for the VPC. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`. |
