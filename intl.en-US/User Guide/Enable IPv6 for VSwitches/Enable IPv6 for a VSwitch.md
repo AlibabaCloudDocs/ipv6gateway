@@ -8,7 +8,7 @@ This topic describes how to allocate an IPv6 CIDR block to a VSwitch.
 
 3.  Select the region where your VSwitch resides.
 
-    **Note:** The following regions support IPv6 gateways: China \(Hangzhou\), China \(Shanghai\), China \(Shenzhen\), China \(Beijing\), China \(Hohhot\), China \(Chengdu\), China \(Hong Kong\), and Singapore \(Singapore\)..
+    **Note:** The following regions support IPv6 gateways: China \(Hangzhou\), China \(Shanghai\), China \(Shenzhen\), China \(Beijing\), China \(Zhangjiakou\), China \(Hohhot\), China \(Chengdu\), China \(Hong Kong\), and Singapore \(Singapore\)..
 
 4.  On the **VSwitches** page, find the target VSwitch, and click **Enable IPv6 CIDR Block** in the **IPv6 CIDR Block** column.
 
