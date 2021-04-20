@@ -2,7 +2,7 @@
 
 This topic describes how to enable Internet bandwidth for an IPv6 address. After Internet bandwidth is enabled for an IPv6 address, the IPv6 address can be used to communicate over the Internet.
 
-An ECS instance is created in the VPC associated with the corresponding IPv6 gateway and is configured with an IPv6 address. For more information, see Assign an IPv6 address to a Windows instance and [Assign an IPv6 address to a Linux instance]()[.](t100331.md#)
+An ECS instance is created in the VPC associated with the corresponding IPv6 gateway and is configured with an IPv6 address.
 
 1.  Log on to the [IPv6 gateway console](https://vpc.console.aliyun.com/ipv6).
 
