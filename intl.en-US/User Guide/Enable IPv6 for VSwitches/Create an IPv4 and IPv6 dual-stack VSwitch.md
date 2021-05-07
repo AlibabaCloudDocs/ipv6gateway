@@ -8,7 +8,7 @@ This topic describes how to assign an IPv6 CIDR block to a VSwitch when you crea
 
 3.  Select the region where you want to deploy the VSwitch.
 
-    **Note:** The following regions support IPv6 gateways: China \(Hangzhou\), China \(Shanghai\), China \(Shenzhen\), China \(Beijing\), China \(Zhangjiakou\), China \(Hohhot\), China \(Chengdu\), China \(Hong Kong\), and Singapore \(Singapore\)..
+    **Note:** The following regions support IPv6 gateways: China \(Beijing\), China \(Zhangjiakou\), China \(Hohhot\), China \(Hangzhou\), China \(Shanghai\), China \(Shenzhen\), China \(Chengdu\), China \(Hong Kong\), Singapore \(Singapore\), and US \(Virginia\).
 
 4.  On the **VSwitches** page, click **Create VSwitch**.
 
@@ -36,13 +36,13 @@ For example, if the VSwitch IPv4 CIDR block is 192.168.1.0/24, the IP addresses 
 
 For example, if a CEN route \(overlapping routing enabled\) with a destination of 172.16.0.0/24 is already added to a route table of the VPC, you cannot specify a CIDR block of the same or larger range as the IPv4 CIDR block of the VSwitch. However, you can use 172.16.0.0/25 or one of a smaller range as the IPv4 CIDR block of the VSwitch.
 
- **Note:** After you create a VSwitch, you cannot modify its IPv4 CIDR block. |
+**Note:** After you create a VSwitch, you cannot modify its IPv4 CIDR block. |
     |**Number of Available Private IPs**|The number of available IPv4 addresses of the VSwitch.|
     |**IPv6 CIDR Block**|Specify an IPv6 CIDR block for the VSwitch.
 
- The default subnet mask for the IPv6 CIDR block of a VSwitch is /64. You can enter a decimal number ranging from 0 to 255 to define the last 8 bits of the IPv6 CIDR block.
+The default subnet mask for the IPv6 CIDR block of a VSwitch is /64. You can enter a decimal number ranging from 0 to 255 to define the last 8 bits of the IPv6 CIDR block.
 
- For example, if the IPv6 CIDR block of the VPC that contains the VSwitch is 2xx1:db8::/64, you can enter 255 \(FF in hexadecimal notation\) in this field to define the IPv6 CIDR block of the VSwitch as 2xx1:db8:ff::/64. |
+For example, if the IPv6 CIDR block of the VPC that contains the VSwitch is 2xx1:db8::/64, you can enter 255 \(FF in hexadecimal notation\) in this field to define the IPv6 CIDR block of the VSwitch as 2xx1:db8:ff::/64. |
     |**Description**|Enter a description for the VSwitch. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`. |
 
 
