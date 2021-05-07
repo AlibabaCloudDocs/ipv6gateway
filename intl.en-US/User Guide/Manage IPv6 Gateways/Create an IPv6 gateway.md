@@ -14,7 +14,7 @@ Make sure that IPv6 is enabled for the VPC before you create an IPv6 gateway for
     |:--------|:----------|
     |**Region and Zone**|Select a region to deploy the IPv6 gateway. The IPv6 gateway must belong to the same region as the VPC for which you want to create the IPv6 gateway.
 
-**Note:** The following regions support IPv6 gateways: China \(Hangzhou\), China \(Shanghai\), China \(Shenzhen\), China \(Beijing\), China \(Zhangjiakou\), China \(Hohhot\), China \(Chengdu\), China \(Hong Kong\), and Singapore \(Singapore\).. |
+**Note:** The following regions support IPv6 gateways: China \(Beijing\), China \(Zhangjiakou\), China \(Hohhot\), China \(Hangzhou\), China \(Shanghai\), China \(Shenzhen\), China \(Chengdu\), China \(Hong Kong\), Singapore \(Singapore\), and US \(Virginia\). |
     |**VPC ID**|Select the VPC for which you want to create an IPv6 gateway. The target VPC may not be available due to the following reasons:     -   Only one IPv6 gateway can be created for each VPC. The VPC already has an IPv6 gateway.
     -   The VPC has a custom route with the destination CIDR block set to ::/0. If this happens, you must delete this custom route before you can create an IPv6 gateway for the VPC.
  **Note:** After an IPv6 gateway is created, you cannot change the VPC that is associated with the IPv6 gateway. |
