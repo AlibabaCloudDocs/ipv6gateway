@@ -1,12 +1,12 @@
 # Pricing
 
-When you use an IPv6 gateway, you are charged for the IPv6 gateway instance and Internet bandwidth.
+When you use an IPv6 gateway, you are charged for using the IPv6 gateway and Internet bandwidth resources.
 
 ## IPv6 gateway instance fees
 
-IPv6 gateway instances support the pay-as-you-go billing method. Fees are calculated on a daily basis.
+IPv6 gateways support the pay-as-you-go billing method. Fees are calculated on a daily basis.
 
-Total fee of a pay-as-you-go IPv6 gateway instance = Unit price \(CNY/day\) × Duration.
+The instance fee of a pay-as-you-go IPv6 gateway = Unit price \(USD/day\) × Duration.
 
 -   The duration refers to the time when the instance is created to the time when the instance is released. The instance is billed once per day. Bills are generated on a daily basis.
 
@@ -14,59 +14,66 @@ Total fee of a pay-as-you-go IPv6 gateway instance = Unit price \(CNY/day\) × D
 
 -   Various IPv6 gateway specifications are provided to meet different requirements. Fees vary based on different specifications, as shown in the following table.
 
-**Note:** If the regions and corresponding prices are different from those displayed in the console, use the information in the console.
+**Note:** If the regions and corresponding prices are different from those displayed in the console, the information in the console shall prevail.
 
-    |Region|Unit price of Free Edition \(CNY/day\)|Unit price of Enterprise Edition \(CNY/day\)|Unit price of Enterprise Enhanced Edition \(CNY/day\)|
+    |Region|Unit price of Free Edition \(USD/day\)|Unit price of Enterprise Edition \(USD/day\)|Unit price of Enterprise Enhanced Edition \(USD/day\)|
     |------|--------------------------------------|--------------------------------------------|-----------------------------------------------------|
-    |China \(Hohhot\), China \(Shenzhen\), China \(Beijing\), China \(Shanghai\), and China \(Hong Kong\) regions|0|12|23|
+    |China \(Beijing\), China \(Zhangjiakou\), China \(Hohhot\), China \(Hangzhou\), China \(Shanghai\), China \(Shenzhen\), China \(Chengdu\), China \(Hong Kong\), Singapore \(Singapore\), and US \(Virginia\)|0|1.8
+
+|3.5 |
 
 
 ## IPv6 Internet bandwidth fee
 
-IPv6 gateway instances support the pay-as-you-go billing method and can be billed by traffic or by bandwidth. Before you select a billing method, you need to know the peak bandwidth and the average bandwidth usage of your service.
+IPv6 gateways support the pay-as-you-go billing method and can be billed by data transfer or by bandwidth. Before you select a metering method, we recommend that you understand the required maximum bandwidth and the average bandwidth usage of your service.
 
 In terms of the average bandwidth usage:
 
--   For business with a low average bandwidth usage \(lower than 20%\), we recommend that you use the pay-by-data-transfer billing method.
+-   For business with a low average bandwidth usage \(lower than 20%\), we recommend that you use the pay-by-data-transfer metering method.
 
--   For business with a high average bandwidth usage \(higher than 35%\), we recommend that you use the pay-by-bandwidth billing method.
+-   For business with a high average bandwidth usage \(higher than 35%\), we recommend that you use the pay-by-bandwidth metering method.
 
--   If the average bandwidth usage of your service is at a medium level, we recommend that you select a billing method based on previous running data of your service.
+-   If the average bandwidth usage of your service is at a medium level, we recommend that you select a metering method based on previous service data.
 
 
 ## IPv6 Internet bandwidth fee \(pay-by-bandwidth\)
 
-Total fee of a bandwidth-based IPv6 gateway instance = Unit price \(CNY/day\) × Peak bandwidth.
+-   If you select this metering method, the billing cycle is one day and bills are generated on a daily basis. If you use an IPv6 gateway for less than one day within a billing cycle, the usage duration is rounded up to one day.
 
--   The instance is billed once per day. Bills are generated on a daily basis. If you use an instance for less than one day within a billing cycle, the usage duration is calculated as one day.
+-   You can modify the maximum bandwidth value as needed. If you modify the maximum bandwidth value within a billing cycle \(one day\), the Internet bandwidth fee is charged based on the maximum bandwidth value that you set within the billing cycle.
 
--   You can modify the peak bandwidth at any time. If you change the peak bandwidth of an Internet bandwidth within a billing cycle \(one day\), the Internet bandwidth fee is calculated based on the maximum peak bandwidth that you set within the statistical period.
+-   Bandwidth fees are charged based on a tiered pricing model with 5 Mbit/s as the boundary.
 
--   Bandwidth fees are calculated based on a tiered pricing strategy with 5 Mbit/s as the boundary.
+**Note:** If the regions and corresponding prices are different from those displayed in the console, the information in the console shall prevail.
 
-**Note:** If the regions and corresponding prices are different from those displayed in the console, use the information in the console.
+|Region|Unit price for 1 to 5 Mbit/s bandwidth \(USD/day\)|Unit price for over 5 Mbit/s bandwidth \(USD/day\)|
+|------|--------------------------------------------------|--------------------------------------------------|
+|China \(Beijing\), China \(Zhangjiakou\), China \(Hohhot\), China \(Hangzhou\), China \(Shanghai\), China \(Shenzhen\), China \(Chengdu\), China \(Hong Kong\), Singapore \(Singapore\), and US \(Virginia\)|-   1 Mbit/s: 0.14
+-   2 Mbit/s: 0.28
+-   3 Mbit/s: 0.43
+-   4 Mbit/s: 0.57
+-   5 Mbit/s: 0.71
+|0.71 + \(N - 5\) × 0.5
 
-|Region|Bandwidth fee \(CNY/day/1-5 Mbit/s\)|Bandwidth fee \(CNY/day/higher than 5 Mbit/s\)|
-|------|------------------------------------|----------------------------------------------|
-|China \(Hohhot\), China \(Shenzhen\), China \(Beijing\), China \(Shanghai\), and China \(Hong Kong\) regions|0.96|3.36|
+**Note:** N represents the maximum bandwidth value. |
 
 
 ## IPv6 Internet bandwidth fee \(pay-by-data-transfer\)
 
-Total fee of a pay-by-data-transfer IPv6 gateway instance = Unit price × Total traffic.
+The fee of a pay-by-data-transfer IPv6 gateway = Unit price × Data transfer.
 
--   The billing cycle or accounting cycle of the instance fee is calculated by hour. If you use an instance for less than one hour within a billing cycle, the usage duration is calculated as one hour.
+-   If you select this metering method, the billing cycle is 1 hour and bills are generated on an hourly basis. If you use an IPv6 gateway for less than 1 hour within a billing cycle, the usage duration is rounded up to 1 hour.
 
--   Total traffic refers to the accumulated outbound traffic IPv6 addresses. Inbound traffic is not billed. Outbound traffic refers to the traffic sent from Alibaba cloud data centers to the Internet.
+-   Data transfer refers to the accumulated outbound traffic of IPv6 addresses. Inbound traffic is not billed. Outbound traffic refers to the data that is transmitted from Alibaba Cloud to the Internet.
 
--   The unit price does not change with the upper limit of the bandwidth. However, we recommend that you set the bandwidth based on your actual requirements. This allows you to avoid excessive data usage fees due to malicious requests or unexpected errors.
+-   If you modify the maximum bandwidth value, the unit price does not change. However, we recommend that you set the bandwidth value based on your actual requirements. This allows you to avoid excessive data usage fees due to malicious requests or unexpected errors.
 
--   The following table lists the unit price of the traffic incurred in different regions.
+-   The following table lists the unit price of data transfer in different regions.
 
-**Note:** If the regions and corresponding prices are different from those displayed in the console, use the information in the console.
+**Note:** If the regions and corresponding prices are different from those displayed in the console, the information in the console shall prevail.
 
-|Region|Traffic unit price \(CNY/GB\)|
-|------|-----------------------------|
-|China \(Hohhot\), China \(Shenzhen\), China \(Beijing\), China \(Shanghai\), and China \(Hong Kong\) regions|0.8|
+|Region|Data transfer unit price \(USD/GB\)|
+|------|-----------------------------------|
+|China \(Beijing\), China \(Zhangjiakou\), China \(Hohhot\), China \(Hangzhou\), China \(Shanghai\), China \(Shenzhen\), China \(Chengdu\), China \(Hong Kong\), Singapore \(Singapore\), and US \(Virginia\)|0.123 |
 
 
