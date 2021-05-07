@@ -6,7 +6,7 @@ This topic describes how to configure both IPv4 and IPv6 CIDR blocks for a VPC w
 
 2.  On the top of the page, select a region to deploy your VPC.
 
-    **Note:** The following regions support IPv6 gateways: China \(Hangzhou\), China \(Shanghai\), China \(Shenzhen\), China \(Beijing\), China \(Zhangjiakou\), China \(Hohhot\), China \(Chengdu\), China \(Hong Kong\), and Singapore \(Singapore\)..
+    **Note:** The following regions support IPv6 gateways: China \(Beijing\), China \(Zhangjiakou\), China \(Hohhot\), China \(Hangzhou\), China \(Shanghai\), China \(Shenzhen\), China \(Chengdu\), China \(Hong Kong\), Singapore \(Singapore\), and US \(Virginia\).
 
 3.  On the VPCs page, click **Create VPC**.
 
