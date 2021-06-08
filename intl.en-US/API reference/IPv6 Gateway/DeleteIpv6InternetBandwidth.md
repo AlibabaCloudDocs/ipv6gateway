@@ -1,48 +1,46 @@
 # DeleteIpv6InternetBandwidth
 
-Deletes the Internet bandwidth of an IPv6 address.
+Sets the Internet bandwidth value of an IPv6 address to zero.
 
-## Debug
+## Debugging
 
-We recommend that you use [OpenAPI Explorer](https://api.aliyun.com/#product=Vpc&api=CreateIpv6Gateway) to call APIs, generate SDK code examples, perform debug operations, and search for APIs.
+[OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Vpc&api=DeleteIpv6InternetBandwidth&type=RPC&version=2016-04-28)
 
 ## Request parameters
 
-|Parameter|Type|Required?|Example value|Description|
-|---------|----|---------|-------------|-----------|
-|Action|String|Yes|DeleteIpv6InternetBandwidth|The name of this action. Value: **DeleteIpv6InternetBandwidth** |
-|RegionId|String|Yes|cn-huhehaote|The ID of the region to which the IPv6 Gateway belongs. |
-|Ipv6AddressId|String|No|ipv6-123456|Optional. The ID of the IPv6 address. |
-|Ipv6InternetBandwidthId|String|No|2|Optional. The ID of the Internet bandwidth of the IPv6 address. |
+|Parameter|Type|Required|Example|Description|
+|---------|----|--------|-------|-----------|
+|Action|String|Yes|DeleteIpv6InternetBandwidth|The operation that you want to perform. Set the value to **DeleteIpv6InternetBandwidth**. |
+|RegionId|String|Yes|cn-huhehaote|The ID of the region where the IPv6 gateway is deployed. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list. |
+|Ipv6AddressId|String|No|ipv6-123456xxxxxxxx|The ID of the IPv6 address. |
+|Ipv6InternetBandwidthId|String|No|2|The Internet bandwidth value of the IPv6 address. |
 
 ## Response parameters
 
-|Parameter|Type|Example value|Description|
-|---------|----|-------------|-----------|
+|Parameter|Type|Example|Description|
+|---------|----|-------|-----------|
 |RequestId|String|E07E0FE6-5C21-405F-AF82-7613AA81EF92|The ID of the request. |
 
 ## Examples
 
-Request example
+Sample requests
 
 ```
 
-https://vpc.cn-huhehaote.aliyuncs.com?Action=DeleteIpv6InternetBandwidth
-&Ipv6AddressId=ipv6-hp351bytt9inrfp6tgubd
+https://vpc.aliyuncs.com/?Action=DeleteIpv6InternetBandwidth
 &RegionId=cn-huhehaote
-&CommonParameters
-			
+&<Common request parameters>
+
 ```
 
-Response examples
+Sample success responses
 
 `XML` format
 
 ```
 <DeleteIpv6InternetBandwidthResponse>
-  <RequestId>6972A26E-99B1-4367-9890-FBDEBB0F5E7D</RequestId>
+	  <RequestId>6972A26E-99B1-4367-9890-FBDEBB0F5E7D</RequestId>
 </DeleteIpv6InternetBandwidthResponse>
-			
 ```
 
 `JSON` format
@@ -57,7 +55,7 @@ Response examples
 
 |HttpCode|Error code|Error message|Description|
 |--------|----------|-------------|-----------|
-|404|InvalidRegionId.NotFound|The specified RegionId does not exist in our records.|The specified RegionId does not exist. Please check if the product is available in the specified region.|
+|404|InvalidRegionId.NotFound|The specified RegionId does not exist in our records.|The error message returned because the specified RegionId parameter is invalid. Check whether the service is available in the specified region.|
 
-[See common error codes](https://error-center.aliyun.com/status/product/Vpc).
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Vpc).
 
